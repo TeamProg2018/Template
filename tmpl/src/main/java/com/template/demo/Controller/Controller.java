@@ -19,7 +19,7 @@ public class Controller {
 
     @Autowired
     GoodsRepository goodsRepository;
-@Autowired
+    @Autowired
     MarketRepository marketRepository;
 
     @GetMapping("/gs")
@@ -53,6 +53,8 @@ public class Controller {
 
        Market mk= marketRepository.findByName(market);
         goods.setMarket(mk);
+        mk.addGood(goods);
+        marketRepository.save(mk);
         goodsRepository.save(goods);
         return "market";
     }
@@ -76,8 +78,8 @@ public class Controller {
     public String showAll(@RequestParam(value="market") String market,
                           Model model) {
 
-   //model.addAttribute("getAllGoods",marketRepository.findByName(market).getGoodsList());
-   model.addAttribute("getAllGoods",goodsRepository.findAll());
+   model.addAttribute("getAllGoods",marketRepository.findByName(market).getGoodsList());
+ //  model.addAttribute("getAllGoods",goodsRepository.findAll());
 
       //  System.out.println(marketRepository.findByName(market).getGoodsList().get(0).getName());
         return "market";
