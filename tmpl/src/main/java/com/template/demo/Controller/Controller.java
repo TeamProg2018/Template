@@ -6,9 +6,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 @org.springframework.stereotype.Controller
 public class Controller {
 
-    @GetMapping("/index")
+//    @GetMapping("/index")
+//    public String getIndex(){
+//        return "index";
+//    }
+
+
+    @GetMapping("/market")
     public String getIndex(){
-        return "index";
+        return "market";
     }
 
     @PostMapping("/index")
