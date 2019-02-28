@@ -8,3 +8,4 @@ public interface GoodsRepository extends JpaRepository<Goods,Long> {
 
     public Goods findByName(String name);
 }
+
