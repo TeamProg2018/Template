@@ -16,6 +16,10 @@ public class Goods {
     @Column(name="good_price")
     private Float price;
 
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name="market_id")
+    private Market market;
+
     public Goods() {
     }
 
@@ -43,5 +47,13 @@ public class Goods {
 
     public void setPrice(Float price) {
         this.price = price;
+    }
+
+    public Market getMarket() {
+        return market;
+    }
+
+    public void setMarket(Market market) {
+        this.market = market;
     }
 }
