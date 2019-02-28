@@ -49,6 +49,7 @@ public class Goods {
         this.price = price;
     }
 
+
     public Market getMarket() {
         return market;
     }

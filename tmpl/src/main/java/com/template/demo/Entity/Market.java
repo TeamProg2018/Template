@@ -46,6 +46,7 @@ public class Market {
         return goodsList;
     }
 
+
     public void setGoodsList(List<Goods> goodsList) {
         this.goodsList = goodsList;
     }
