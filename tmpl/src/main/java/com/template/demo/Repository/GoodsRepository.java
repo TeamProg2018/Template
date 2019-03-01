@@ -1,11 +1,8 @@
-package com.template.demo.Repository;
+package com.example11.demo11.Repository;
 
-import com.template.demo.Entity.Goods;
-import com.template.demo.Entity.Market;
+import com.example11.demo11.Entity.GoodModel;
+import com.example11.demo11.Entity.MarketModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface GoodsRepository extends JpaRepository<Goods,Long> {
-
-    public Goods findByName(String name);
+public interface GoodsRepository extends JpaRepository<GoodModel,Long> {
 }
-
