@@ -1,65 +1,23 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Market</title>
+    <title>Title</title>
 </head>
 <body>
-<form method="post" action="/am">
-    <input type="text" name="name" placeholder="Input market name" required/>
+
+<form method="post" action="/addMarket">
+    <input type="text" name="name1" placeholder="Input market name" required/>
     <button type="submit">Add market</button>
 </form>
 <br>
-<form method="post" action="/ag">
-    <input type="text" name="name" placeholder="Input good name" required/>
-    <input type="text" name="price" placeholder="Input good price" required/>
-    <input type="text" name="market" placeholder="Input market name" required/>
+<form method="post" action="/addGood">
+    <input type="text" name="name1" placeholder="Input good name" required/>
+    <input type="text" name="name2" placeholder="Input good price" required/>
+    <input type="text" name="name3" placeholder="Input market name" required/>
     <button type="submit">Add good</button>
 </form>
 <br>
-<form method="post" action="/chm">
-    <input type="text" name="good" placeholder="Input good name" required/>
-    <input type="text" name="market" placeholder="Input new market" required/>
-    <button type="submit">Change market</button>
-</form>
-<br>
-
-<form method="post" action="/sha">
-    <input type="text" name="market" placeholder="Input market" required/>
-    <button type="submit">Show all</button>
-</form>
-    <table border="1">
-        <tr>
-            <th> Form Name</th>
-            <th> Form Price </th>
-        </tr>
-        <tr th:each="each:${getAllGoods}">
-            <td th:text="${each.getName()}">...</td>
-            <td th:text="${each.getPrice()}">...</td>
-        </tr>
-    </table>
-
-
-<!--
-<table border="1">
-    <tr>
-        <th> market Name</th>
-        <th>  </th>
-    </tr>
-    <tr th:each="each:${getAll}">
-
-        <td th:text="${each.getName()}">...</td>
-        <td th:text="${each.getPrice()}">...</td>
-    </tr>
-</table>
--->
-
-
-
-
-
-
-
 
 </body>
 </html>
