@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SomeClass</title>
+</head>
+<body>
+
+<form action="/pg" method="post">
+    <input type="text" name="FormName" placeholder="some_name"/>
+    <input type="number" name="FormPrice" placeholder="some_price"/>
+    <button type="submit"> AddSomeClassEntity </button>
+
+    <br/>
+</form>
+
+
+<div>
+    <table border="1">
+        <tr>
+            <th> Form Name</th>
+            <th> Form Price </th>
+        </tr>
+        <tr th:each="each:${getSomeClassList}">
+            <td th:text="${each.some_name}">...</td>
+            <td th:text="${each.some_price}">...</td>
+        </tr>
+    </table>
+</div>
+     
+
+
+</body>
+</html>
